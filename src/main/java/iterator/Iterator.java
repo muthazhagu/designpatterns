@@ -3,7 +3,7 @@ package main.java.iterator;
 /**
  * Created by mpalanisamy on 8/11/16.
  */
-public class Iterator {
+public class Iterator implements AbstractIterator{
     private int currentIndex = -1;
     private int length = 0;
     private Product[] p;
