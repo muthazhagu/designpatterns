@@ -1,4 +1,4 @@
-package main.java.iterator;
+package main.java.iterator.product;
 
 /**
  * Created by muthu on 8/13/16.
