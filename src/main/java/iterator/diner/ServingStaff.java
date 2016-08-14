@@ -10,7 +10,7 @@ public class ServingStaff {
     private ArrayList<MenuItem> pancakeHouseMenuItems = pancakeHouseMenu.getMenuItems();
 
     private DinerHouseMenu dinerHouseMenu = new DinerHouseMenu();
-    private MenuItem[] dinerHouseMenuItems = dinerHouseMenu.getMenuItems();
+    private Iterator dinerHouseMenuItemsIterator = dinerHouseMenu.createIterator();
 
     public void printPancakeHouseMenu(){
         for (MenuItem menuItem: pancakeHouseMenuItems) {
@@ -19,14 +19,15 @@ public class ServingStaff {
     }
 
     public void printDinerHouseMenu(){
-        for (MenuItem menuItem: dinerHouseMenuItems) {
-            System.out.println(menuItem);
+        while (dinerHouseMenuItemsIterator.hasNext()) {
+            System.out.println("True");
+            System.out.println(dinerHouseMenuItemsIterator.next());
         }
     }
 
     public static void main(String[] args){
         ServingStaff servingStaff = new ServingStaff();
-        servingStaff.printPancakeHouseMenu();
+//        servingStaff.printPancakeHouseMenu();
         servingStaff.printDinerHouseMenu();
     }
 }
