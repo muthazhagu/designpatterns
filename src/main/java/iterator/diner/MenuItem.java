@@ -34,6 +34,6 @@ public class MenuItem {
 
     @Override
     public String toString(){
-        return getName() + "-" + getDescription() + ", " + getPrice();
+        return getName() + " - " + getDescription() + ", " + getPrice();
     }
 }

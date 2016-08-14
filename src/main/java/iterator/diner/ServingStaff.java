@@ -23,4 +23,10 @@ public class ServingStaff {
             System.out.println(menuItem);
         }
     }
+
+    public static void main(String[] args){
+        ServingStaff servingStaff = new ServingStaff();
+        servingStaff.printPancakeHouseMenu();
+        servingStaff.printDinerHouseMenu();
+    }
 }
