@@ -47,7 +47,7 @@ public class DinerHouseMenu {
 //        return menuItems;
 //    }
 
-    public Iterator createIterator(){
+    public java.util.Iterator createIterator(){
         return new DinerMenuIterator(menuItems);
     }
 }

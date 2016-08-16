@@ -1,6 +1,7 @@
 package main.java.iterator.diner;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by muthu on 8/13/16.
@@ -10,8 +11,8 @@ public class ServingStaff {
     private DinerHouseMenu dinerHouseMenu;
 
     public void printMenu(){
-        Iterator pancakeHouseMenuIterator = pancakeHouseMenu.createIterator();
-        Iterator dinerHouseMenuItemsIterator = dinerHouseMenu.createIterator();
+        java.util.Iterator pancakeHouseMenuIterator = pancakeHouseMenu.createIterator();
+        java.util.Iterator dinerHouseMenuItemsIterator = dinerHouseMenu.createIterator();
 
         System.out.println("Diner House Menu");
         printMenu(dinerHouseMenuItemsIterator);

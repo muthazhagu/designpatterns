@@ -5,7 +5,7 @@ import java.util.Iterator;
 /**
  * Created by muthu on 8/13/16.
  */
-public class DinerMenuIterator implements java.util.Iterator {
+public class DinerMenuIterator implements Iterator {
     private MenuItem[] menuItems;
     int currentPosition = -1;
 
