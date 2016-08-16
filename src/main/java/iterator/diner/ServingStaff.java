@@ -6,13 +6,13 @@ import java.util.ArrayList;
  * Created by muthu on 8/13/16.
  */
 public class ServingStaff {
-    private PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
-    private Iterator pancakeHouseMenuIterator = pancakeHouseMenu.createIterator();
-
-    private DinerHouseMenu dinerHouseMenu = new DinerHouseMenu();
-    private Iterator dinerHouseMenuItemsIterator = dinerHouseMenu.createIterator();
+    private PancakeHouseMenu pancakeHouseMenu;
+    private DinerHouseMenu dinerHouseMenu;
 
     public void printMenu(){
+        Iterator pancakeHouseMenuIterator = pancakeHouseMenu.createIterator();
+        Iterator dinerHouseMenuItemsIterator = dinerHouseMenu.createIterator();
+
         System.out.println("Diner House Menu");
         printMenu(dinerHouseMenuItemsIterator);
         System.out.println();
@@ -26,8 +26,15 @@ public class ServingStaff {
         }
     }
 
+    public ServingStaff(PancakeHouseMenu p, DinerHouseMenu d) {
+        pancakeHouseMenu = p;
+        dinerHouseMenu = d;
+    }
+
     public static void main(String[] args){
-        ServingStaff servingStaff = new ServingStaff();
+        PancakeHouseMenu p = new PancakeHouseMenu();
+        DinerHouseMenu d = new DinerHouseMenu();
+        ServingStaff servingStaff = new ServingStaff(p, d);
         servingStaff.printMenu();
     }
 }
