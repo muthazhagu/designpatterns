@@ -1,9 +1,11 @@
 package main.java.iterator.diner;
 
+import java.util.Iterator;
+
 /**
  * Created by muthu on 8/13/16.
  */
-public class DinerMenuIterator implements Iterator {
+public class DinerMenuIterator implements java.util.Iterator {
     private MenuItem[] menuItems;
     int currentPosition = -1;
 
@@ -22,5 +24,9 @@ public class DinerMenuIterator implements Iterator {
         } else {
             return menuItems[currentPosition];
         }
+    }
+
+    public void remove() {
+        throw new UnsupportedOperationException();
     }
 }
