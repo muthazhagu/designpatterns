@@ -7,27 +7,29 @@ import java.util.ArrayList;
  */
 public class ServingStaff {
     private PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
-    private ArrayList<MenuItem> pancakeHouseMenuItems = pancakeHouseMenu.getMenuItems();
+    private Iterator pancakeHouseMenuIterator = pancakeHouseMenu.createIterator();
 
     private DinerHouseMenu dinerHouseMenu = new DinerHouseMenu();
     private Iterator dinerHouseMenuItemsIterator = dinerHouseMenu.createIterator();
 
     public void printPancakeHouseMenu(){
-        for (MenuItem menuItem: pancakeHouseMenuItems) {
-            System.out.println(menuItem);
+        while (pancakeHouseMenuIterator.hasNext()) {
+            System.out.println(pancakeHouseMenuIterator.next());
         }
     }
 
     public void printDinerHouseMenu(){
         while (dinerHouseMenuItemsIterator.hasNext()) {
-            System.out.println("True");
             System.out.println(dinerHouseMenuItemsIterator.next());
         }
     }
 
     public static void main(String[] args){
         ServingStaff servingStaff = new ServingStaff();
-//        servingStaff.printPancakeHouseMenu();
+        System.out.println("Diner House Menu");
         servingStaff.printDinerHouseMenu();
+        System.out.println();
+        System.out.println("Pancake House Menu");
+        servingStaff.printPancakeHouseMenu();
     }
 }

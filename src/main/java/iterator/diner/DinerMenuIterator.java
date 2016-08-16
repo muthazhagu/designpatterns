@@ -17,7 +17,6 @@ public class DinerMenuIterator implements Iterator {
 
     public Object next(){
         currentPosition += 1;
-        System.out.println(currentPosition);
         if (currentPosition >= menuItems.length) {
             return null;
         } else {
