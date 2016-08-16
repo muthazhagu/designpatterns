@@ -12,24 +12,22 @@ public class ServingStaff {
     private DinerHouseMenu dinerHouseMenu = new DinerHouseMenu();
     private Iterator dinerHouseMenuItemsIterator = dinerHouseMenu.createIterator();
 
-    public void printPancakeHouseMenu(){
-        while (pancakeHouseMenuIterator.hasNext()) {
-            System.out.println(pancakeHouseMenuIterator.next());
-        }
+    public void printMenu(){
+        System.out.println("Diner House Menu");
+        printMenu(dinerHouseMenuItemsIterator);
+        System.out.println();
+        System.out.println("Pancake House Menu");
+        printMenu(pancakeHouseMenuIterator);
     }
 
-    public void printDinerHouseMenu(){
-        while (dinerHouseMenuItemsIterator.hasNext()) {
-            System.out.println(dinerHouseMenuItemsIterator.next());
+    public void printMenu(Iterator iterator){
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
         }
     }
 
     public static void main(String[] args){
         ServingStaff servingStaff = new ServingStaff();
-        System.out.println("Diner House Menu");
-        servingStaff.printDinerHouseMenu();
-        System.out.println();
-        System.out.println("Pancake House Menu");
-        servingStaff.printPancakeHouseMenu();
+        servingStaff.printMenu();
     }
 }
