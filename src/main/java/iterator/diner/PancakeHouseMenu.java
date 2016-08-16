@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by muthu on 8/13/16.
  */
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu {
     private ArrayList<MenuItem> menuItems;
 
     public PancakeHouseMenu(){

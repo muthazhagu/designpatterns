@@ -3,7 +3,7 @@ package main.java.iterator.diner;
 /**
  * Created by muthu on 8/13/16.
  */
-public class DinerHouseMenu {
+public class DinerHouseMenu implements Menu {
     private static final int MAX_ITEMS  = 4;
     private int numberOfItems = 0;
     MenuItem[] menuItems;

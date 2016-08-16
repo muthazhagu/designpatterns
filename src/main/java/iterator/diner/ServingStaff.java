@@ -7,12 +7,12 @@ import java.util.Iterator;
  * Created by muthu on 8/13/16.
  */
 public class ServingStaff {
-    private PancakeHouseMenu pancakeHouseMenu;
-    private DinerHouseMenu dinerHouseMenu;
+    private Menu pancakeHouseMenu;
+    private Menu dinerHouseMenu;
 
     public void printMenu(){
-        java.util.Iterator pancakeHouseMenuIterator = pancakeHouseMenu.createIterator();
-        java.util.Iterator dinerHouseMenuItemsIterator = dinerHouseMenu.createIterator();
+        java.util.Iterator<MenuItem> pancakeHouseMenuIterator = pancakeHouseMenu.createIterator();
+        java.util.Iterator<MenuItem> dinerHouseMenuItemsIterator = dinerHouseMenu.createIterator();
 
         System.out.println("Diner House Menu");
         printMenu(dinerHouseMenuItemsIterator);
@@ -27,7 +27,7 @@ public class ServingStaff {
         }
     }
 
-    public ServingStaff(PancakeHouseMenu p, DinerHouseMenu d) {
+    public ServingStaff(Menu p, Menu d) {
         pancakeHouseMenu = p;
         dinerHouseMenu = d;
     }
