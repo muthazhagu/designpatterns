@@ -7,23 +7,18 @@ import java.util.Iterator;
  * Created by muthu on 8/13/16.
  */
 public class ServingStaff {
-    private Menu pancakeHouseMenu;
-    private Menu dinerHouseMenu;
-    private Menu cafeHouseMenu;
+    private ArrayList<Menu> menus;
+
+    public ServingStaff(ArrayList<Menu> menus) {
+        this.menus = menus;
+    }
 
     public void printMenu(){
-        java.util.Iterator<MenuItem> pancakeHouseMenuIterator = pancakeHouseMenu.createIterator();
-        java.util.Iterator<MenuItem> dinerHouseMenuItemsIterator = dinerHouseMenu.createIterator();
-        java.util.Iterator<MenuItem> cafeHouseMenuItemsIterator = cafeHouseMenu.createIterator();
-
-        System.out.println("Diner House Menu");
-        printMenu(dinerHouseMenuItemsIterator);
-        System.out.println();
-        System.out.println("Pancake House Menu");
-        printMenu(pancakeHouseMenuIterator);
-        System.out.println();
-        System.out.println("Cafe House Menu");
-        printMenu(cafeHouseMenuItemsIterator);
+        Iterator<Menu> menuIterator = menus.iterator();
+        while(menuIterator.hasNext()) {
+            Menu menu = menuIterator.next();
+            printMenu(menu.createIterator());
+        }
     }
 
     public void printMenu(Iterator iterator){
@@ -32,17 +27,17 @@ public class ServingStaff {
         }
     }
 
-    public ServingStaff(Menu p, Menu d, Menu c) {
-        pancakeHouseMenu = p;
-        dinerHouseMenu = d;
-        cafeHouseMenu = c;
-    }
-
     public static void main(String[] args){
         PancakeHouseMenu p = new PancakeHouseMenu();
         DinerHouseMenu d = new DinerHouseMenu();
         CafeMenu c = new CafeMenu();
-        ServingStaff servingStaff = new ServingStaff(p, d, c);
+
+        ArrayList<Menu> menus = new ArrayList<>();
+        menus.add(p);
+        menus.add(d);
+        menus.add(c);
+
+        ServingStaff servingStaff = new ServingStaff(menus);
         servingStaff.printMenu();
     }
 }
