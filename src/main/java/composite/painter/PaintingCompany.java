@@ -15,16 +15,12 @@ public class PaintingCompany implements PainterInterface {
     public float getPainterCapacity() {
         float painterCapacity = 0;
         for (Painter painter: painters) {
-            painterCapacity += painter.estimateDaysToPaint(1);
+            painterCapacity += 1/painter.estimateDaysToPaint(1);
         }
-        return painterCapacity;
-    }
-
-    public float daysToPaintOneHouse() {
-        return 1 / getPainterCapacity();
+        return 1/painterCapacity;
     }
 
     public float estimateDaysToPaint(int numberOfHouses) {
-        return numberOfHouses * daysToPaintOneHouse();
+        return numberOfHouses * getPainterCapacity();
     }
 }
