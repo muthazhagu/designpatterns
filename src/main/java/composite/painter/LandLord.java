@@ -12,7 +12,7 @@ public class LandLord {
         this.painterInterface = painterInterface;
     }
 
-    public void ManageHouses() {
+    public void manageHouses() {
         System.out.println("Number of days to paint houses: " + painterInterface.estimateDaysToPaint(numberOfHouses));
     }
 }

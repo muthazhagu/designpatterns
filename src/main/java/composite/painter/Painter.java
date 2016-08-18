@@ -10,7 +10,7 @@ public class Painter implements PainterInterface {
         this.daysPerHouse = daysPerHouse;
     }
 
-    public int estimateDaysToPaint(int numberOfHouses) {
+    public float estimateDaysToPaint(int numberOfHouses) {
         return numberOfHouses * daysPerHouse;
     }
 }
