@@ -1,5 +1,7 @@
 package main.java.composite.diner;
 
+import java.util.Iterator;
+
 import java.util.ArrayList;
 
 /**
@@ -45,5 +47,11 @@ public class Menu extends MenuComponent {
         System.out.print("\n" + getName());
         System.out.println(", " + getDescription());
         System.out.println("_____________________");
+
+        Iterator<MenuComponent> iterator = menuComponents.iterator();
+        while (iterator.hasNext()) {
+            MenuComponent menuComponent = iterator.next();
+            menuComponent.print();
+        }
     }
 }
