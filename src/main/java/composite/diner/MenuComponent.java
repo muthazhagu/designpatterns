@@ -1,5 +1,7 @@
 package main.java.composite.diner;
 
+import java.util.Iterator;
+
 /**
  * Created by mpalanisamy on 8/19/16.
  */
@@ -35,4 +37,6 @@ public abstract class MenuComponent {
     public void print() {
         throw new UnsupportedOperationException();
     }
+
+    public abstract Iterator<MenuComponent> createIterator();
 }

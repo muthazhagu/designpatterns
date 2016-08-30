@@ -1,5 +1,7 @@
 package main.java.composite.diner;
 
+import java.util.Iterator;
+
 /**
  * Created by muthu on 8/23/16.
  */
@@ -44,6 +46,11 @@ public class MenuItem extends MenuComponent {
         }
         System.out.println(", " + getPrice());
         System.out.println(" -- " + getDescription());
+    }
+
+    @Override
+    public Iterator<MenuComponent> createIterator() {
+        return new NullIterator();
     }
 
 }
