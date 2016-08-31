@@ -25,7 +25,10 @@ public class MenuTestDrive {
         allMyMenus.add(menu_01);
         allMyMenus.add(menu_02);
         allMyMenus.add(menu_03);
-        allMyMenus.print();
+//        allMyMenus.print();
+
+        ServingStaff servingStaff = new ServingStaff(allMyMenus);
+        servingStaff.printVeggieMenu();
 
     }
 }
